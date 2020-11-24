@@ -1,0 +1,36 @@
+﻿<Window x:Class="Oefening3_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oefening3_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Right">
+            <TextBlock FontWeight="Bold" Margin="0,0,0,10">ListBox selectie</TextBlock>
+            <Button x:Name="ButtonToonGeselecteerde" Click="ButtonToonGeselecteerde_Click">Toon geselecteerde</Button>
+            <Button x:Name="ButtonSelecteerEerste" Click="ButtonSelecteerEerste_Click">Selecteer Eerste</Button>
+            <Button x:Name="ButtonSelecteerVolgende" Click="ButtonSelecteerVolgende_Click">Selecteer Volgende</Button>
+            <Button x:Name="ButtonSelecteerLaatste" Click="ButtonSelecteerLaatste_Click">Selecteer Laatste</Button>
+            <Button x:Name="ButtonSelecteerAlles" Click="ButtonSelecteerAlles_Click">Selecteer Alles</Button>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Left" Margin="20">
+            <ListBox x:Name="ListBoxCursussen" HorizontalContentAlignment="Stretch" SelectionMode="Multiple">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Naam}"/>
+                            <ProgressBar  Width ="100" Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding PercentLesUrenGevolgd}"/>
+                        </Grid>
+                    </DataTemplate>
+
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </DockPanel>
+</Window>
