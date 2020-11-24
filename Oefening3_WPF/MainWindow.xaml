@@ -34,3 +34,19 @@
         </StackPanel>
     </DockPanel>
 </Window>
+<!--Oefening 3
+Maak een nieuwe WPF App waarin je in de MainWindow
+Een DockPanel zet links gedocked een ListBox van Cursus objecten. Zet de SelectionMode op Multiple
+public class Cursus
+{
+	public string	Naam {get; set;}
+	public int PercentLesUrenGevolgd {get; set;}
+}
+In de Listbox toon je zoals in het voorbeeld met Taken de Naam van elke taak en daarnaast het PercentLesUrenGevolgd in een progress bar (waarde tussen 0 en 100)
+
+Rechts toon je een aantal buttons (zoals in demo) en zet op elke butten een event handler op Click event.
+Button: Toon geselecteerde 
+Button: Selecteer eerste
+Button: Selecteer volgende
+Button: Selecteer laatste
+Button: Selecteer Alles-->

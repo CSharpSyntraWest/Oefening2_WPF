@@ -42,3 +42,8 @@
 
     </Grid>
 </Window>
+<!--Oefening 2 WPF
+
+Maak een nieuw WPF project met in de MainWindow.xaml:
+- Een Tabblad waarin op het eerste tabblad een ListBox staat met de system Colors
+- Op het 2de tabblad maak je een vaste Combobox eveneens met de de system Colors-->
